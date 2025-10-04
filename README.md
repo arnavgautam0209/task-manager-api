@@ -8,7 +8,7 @@
 ![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-Auth-black?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
 
-[![Build Status](https://github.com/arnavgautam0209/task-manager-api/workflows/CI/badge.svg)](https://github.com/arnavgautam0209/task-manager-api/actions/workflows/ci.yml)
+[![Build Status](https://github.com/arnavgautam0209/task-manager-api/actions/workflows/ci.yml/badge.svg)](https://github.com/arnavgautam0209/task-manager-api/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Coverage](https://img.shields.io/badge/Coverage-95%25-brightgreen?style=for-the-badge)](https://github.com/arnavgautam0209/task-manager-api)
 
