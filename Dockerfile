@@ -1,7 +1,7 @@
 # Multi-stage build for optimal image size and security
 
 # Build stage
-FROM maven:3.9.6-eclipse-temurin-17-alpine AS build
+FROM maven:3.9.6-eclipse-temurin-17 AS build
 
 # Set working directory
 WORKDIR /app
@@ -21,12 +21,13 @@ COPY src ./src
 RUN ./mvnw clean package -DskipTests
 
 # Runtime stage
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre
 
 # Install security updates and create non-root user
-RUN apk update && apk upgrade && \
-    addgroup -g 1001 -S appuser && \
-    adduser -u 1001 -S appuser -G appuser
+RUN apt-get update && apt-get upgrade -y && \
+    groupadd -g 1001 appuser && \
+    useradd -u 1001 -g appuser appuser && \
+    rm -rf /var/lib/apt/lists/*
 
 # Set working directory
 WORKDIR /app
